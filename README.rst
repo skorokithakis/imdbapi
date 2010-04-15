@@ -8,8 +8,8 @@ an API to retrieve information from them.
 Dependencies
 ------------
 
-To run imdbapi, you need the `bottle framework <http://bottle.paws.de/>`
-and the `SQLAlchemy ORM <http://www.sqlalchemy.org/>`.
+To run imdbapi, you need the `bottle framework <http://bottle.paws.de/>`_
+and the `SQLAlchemy ORM <http://www.sqlalchemy.org/>`_.
 
 License
 -------
