@@ -32,6 +32,9 @@
 		</ol>
 		
 		<ul>
+        <li>The source code for this service is
+        <a href="http://github.com/skorokithakis/imdbapi">available on GitHub</a>.
+        </li>
 		<li>I have also written a script that will rename your show's video files using
 		this and other services, you can find it here:
 		<a href="http://github.com/skorokithakis/episode-renamer/">Episode renamer</a>.</li>
