@@ -7,7 +7,7 @@ import codecs
 import re
 import sqlalchemy
 
-session = init_db()
+session = init_db(transactional=True)
 
 def import_data(filename):
     """Import episode names and ratings from a file."""
@@ -36,7 +36,8 @@ def import_data(filename):
                 episode = Episode(show, episode["episode_name"], episode["season_no"], episode["episode_no"])
                 session.add(episode)
 
-    session.commit()
+    #session.commit()
 
-import_data("movies.list")
+if __name__ == "__main__":
+    import_data("movies.list")
 

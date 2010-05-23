@@ -46,5 +46,10 @@
 		<p>
 		Have fun!
 		</p>
+        <script type="text/javascript">
+            var flattr_url = 'http://imdbapi.poromenos.org/';
+        </script>
+        <script src="http://api.flattr.com/button/load.js" type="text/javascript"></script>
+
 	</body>
 </html>

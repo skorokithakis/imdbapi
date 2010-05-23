@@ -55,10 +55,10 @@ class Stats(Base):
         return "<Stats('%s','%s')>" % (self.key, self.value)
 
 
-def init_db():
+def init_db(transactional=False):
     engine = sqlalchemy.create_engine(CONNECTION_STRING)
     Base.metadata.create_all(engine)
-    Session = sessionmaker(bind=engine, transactional=False)
+    Session = sessionmaker(bind=engine, transactional=transactional)
     session = Session()
     return session
 
