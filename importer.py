@@ -11,7 +11,8 @@ session = init_db(transactional=True)
 
 def import_data(filename):
     """Import episode names and ratings from a file."""
-    regex = re.compile(""""(?P<show_name>.*?)"\s+\((?P<year>\d+)(?:|/.*?)\)\s+\{(?P<episode_name>.*?) \(\#(?P<season_no>\d+)\.(?P<episode_no>\d+)\)\}""")
+    regex = re.compile(""""(?P<show_name>.*?)"\s+\((?P<year>\d+)(?:|/.*?)\)\s+\{(?P<episode_name>.*?)\s?\(\#(?P<season_no>\d+)\.(?P<episode_no>\d+)\)\}""")
+
     with codecs.open(filename, "r", "latin-1") as ratings:
         # Generate all the lines that matched.
         matches = (match for match in (regex.search(line.strip()) for line in ratings) if match)
@@ -23,6 +24,10 @@ def import_data(filename):
             episode = {}
             for field in ["show_name", "year", "episode_name", "episode_no", "season_no"]:
                 episode[field] = match.group(field)
+
+            # If the episode has no name it is given the same name as on imdb.com for consistency.
+            if not episode["episode_name"]:
+                episode["episode_name"] = "Episode #%s.%s" % (episode["season_no"], episode["episode_no"])
 
             try:
                 show = session.query(Show).filter_by(name=episode["show_name"], year=episode["year"]).one()
