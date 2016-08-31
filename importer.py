@@ -41,7 +41,7 @@ def import_data(filename):
                 episode = Episode(show, episode["episode_name"], episode["season_no"], episode["episode_no"])
                 session.add(episode)
 
-    #session.commit()
+    session.commit()
 
 if __name__ == "__main__":
     import_data("movies.list")

@@ -58,7 +58,7 @@ class Stats(Base):
 def init_db(transactional=False):
     engine = sqlalchemy.create_engine(CONNECTION_STRING)
     Base.metadata.create_all(engine)
-    Session = sessionmaker(bind=engine, transactional=transactional)
+    Session = sessionmaker(bind=engine)
     session = Session()
     return session
 

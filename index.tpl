@@ -51,9 +51,8 @@
 		<li>I have also written a script that will rename your show's video files using
 		this and other services, you can find it here:
 		<a href="http://github.com/skorokithakis/episode-renamer/">Episode renamer</a>.</li>
-		<li>If you need to contact me, my email is
-		<a href="mailto:stavros@korokithakis.net">stavros@korokithakis.net</a>.</li>
-		<li>My homepage is <a href="http://www.korokithakis.net">korokithakis.net</a>.</li>
+		<li>If you need to contact me, my email is can be found on my site.</li>
+		<li>My site is <a href="https://www.stavros.io">stavros.io</a>.</li>
 		</ul>
 
 		<p>
