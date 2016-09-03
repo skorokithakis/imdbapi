@@ -1,5 +1,5 @@
 from database import Show, Episode, Stats, init_db
-from bottle import route, run, request, template, response
+from bottle import route, run, request, template, response, default_app
 import simplejson
 import sqlalchemy
 import urllib
@@ -53,6 +53,8 @@ def js():
 @route('/')
 def index():
     return template("index")
+
+app = application = default_app()
 
 if __name__ == "__main__":
     run(host='localhost', port=8000)

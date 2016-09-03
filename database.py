@@ -11,7 +11,7 @@ Base = declarative_base()
 class Show(Base):
     __tablename__ = 'shows'
     id = sqlalchemy.Column(sqlalchemy.Integer, primary_key=True)
-    name = sqlalchemy.Column(sqlalchemy.Unicode(200))
+    name = sqlalchemy.Column(sqlalchemy.Unicode(200), index=True)
     year = sqlalchemy.Column(sqlalchemy.Integer)
 
     def __init__(self, name, year):
