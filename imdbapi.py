@@ -29,7 +29,7 @@ def get_data(show_name, show_year=None):
 
 @route('/json/')
 def json():
-    response.header['Content-Type'] = 'application/json'
+    response.content_type = 'application/json'
     show_name = request.GET.get("name", None)
     show_year = request.GET.get("year", None)
     callback = request.GET.get("callback", None)
