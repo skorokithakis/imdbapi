@@ -7,7 +7,7 @@ import urllib
 session = init_db()
 
 def get_data(show_name, show_year=None):
-    if not show_name or (show_year and not show_year.isdigit()):
+    if not show_name or len(show_name) <= 3 or (show_year and not show_year.isdigit()):
         return None
 
     show = session.query(Show).filter(Show.name.like(show_name))
