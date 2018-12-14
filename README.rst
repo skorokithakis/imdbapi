@@ -2,6 +2,9 @@
 imdbapi
 =======
 
+.. image:: https://www.codeshelter.co/static/badges/badge-flat.svg
+    :target: www.codeshelter.co
+
 imdbapi is a web-based script that parses the IMDB datafiles and exposes
 an API to retrieve information from them.
 
